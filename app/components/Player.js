@@ -30,11 +30,10 @@ export default function PlayerProvider({ children }) {
           {item && showYouTube && (
             <iframe
               className="vstage"
-              src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}?autoplay=1&rel=0`}
+              src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}?autoplay=1&controls=0&disablekb=1&fs=0&playsinline=1&rel=0`}
               title={item.title}
-              allow="autoplay; encrypted-media; picture-in-picture; web-share"
+              allow="autoplay; encrypted-media"
               referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
             />
           )}
           {item && showVideo && (
