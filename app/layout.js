@@ -1,6 +1,7 @@
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import "./styles/portfolio.css";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",

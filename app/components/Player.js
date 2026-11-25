@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 const Ctx = createContext({ open: () => { } });
 export const usePlayer = () => useContext(Ctx);
@@ -28,12 +29,14 @@ export default function PlayerProvider({ children }) {
         <button id="vx" aria-label="Close" onClick={close}>×</button>
         <div id="vs">
           {item && showYouTube && (
-            <iframe
-              className="vstage"
-              src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}?autoplay=1&controls=0&disablekb=1&fs=0&playsinline=1&rel=0`}
+            <LiteYouTubeEmbed
+              id={item.youtubeId}
               title={item.title}
-              allow="autoplay; encrypted-media"
-              referrerPolicy="strict-origin-when-cross-origin"
+              thumbnail={item.poster}
+              params={{ controls: 1, rel: 0, playsinline: 1 }}
+              wrapperClass="vstage yt-lite"
+              iframeClass="vstage"
+              noscriptFallback={false}
             />
           )}
           {item && showVideo && (
