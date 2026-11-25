@@ -11,6 +11,10 @@ export const siteConfig = {
 
 export const whatsAppTemplateBodyLimit = 1024;
 
+const filmVideoBaseUrl =
+  process.env.NEXT_PUBLIC_FILM_VIDEO_BASE_URL?.replace(/\/+$/, "") || "/videos";
+const filmVideoUrl = (filename) => `${filmVideoBaseUrl}/${filename}`;
+
 /* ── Hero section ── */
 export const heroWords = [
   "Your", "wedding", "day,", ["edited"], "the", "way", "you", ["felt"], "it.",
@@ -24,12 +28,12 @@ export const stats = [
 
 /* ── Films (portfolio) ── */
 export const films = [
-  { id: 1, title: "Ameera & Joy", place: "Rosewood, London", region: "uk", video: "/videos/ameera-joy.mp4", poster: "/images/ameera-joy-poster.jpg", from: "#3a1424", to: "#1a0a14" },
-  { id: 2, title: "Sundus & Ayaz", place: "The Savoy, London", region: "uk", video: "/videos/sundus-ayaz.mp4", poster: "/images/sundus-ayaz-poster.jpg", from: "#2c1228", to: "#140b18" },
-  { id: 3, title: "Malak & Firas", place: "The Plaza, New York", region: "us", video: "/videos/malak-firas.mp4", poster: "/images/malak-firas-poster.jpg", from: "#3a2010", to: "#1a0e08" },
-  { id: 4, title: "Aliya & Ahmed", place: "Hever Castle, Kent", region: "uk", video: "/videos/aliya-ahmed.mp4", poster: "/images/aliya-ahmed-poster.jpg", from: "#281826", to: "#120c12" },
-  { id: 5, title: "Lia & Telem", place: "Beverly Hills Hotel, LA", region: "us", video: "/videos/lia-telem.mp4", poster: "/images/lia-telem-poster.jpg", from: "#241420", to: "#100a10" },
-  { id: 6, title: "Aisha & Ahmed", place: null, region: null, video: "/videos/shoot-aisha-ahmed.mp4", poster: "/images/shoot-aisha-ahmed-poster.jpg", from: "#281826", to: "#120c12" },
+  { id: 1, title: "Ameera & Joy", place: "Rosewood, London", region: "uk", youtubeId: "rLNQKtMaTCM", poster: "/images/ameera-joy-poster.jpg", from: "#3a1424", to: "#1a0a14" },
+  { id: 2, title: "Sundus & Ayaz", place: "The Savoy, London", region: "uk", video: filmVideoUrl("sundus-ayaz.mp4"), poster: "/images/sundus-ayaz-poster.jpg", from: "#2c1228", to: "#140b18" },
+  { id: 3, title: "Malak & Firas", place: "The Plaza, New York", region: "us", video: filmVideoUrl("malak-firas.mp4"), poster: "/images/malak-firas-poster.jpg", from: "#3a2010", to: "#1a0e08" },
+  { id: 4, title: "Aliya & Ahmed", place: "Hever Castle, Kent", region: "uk", video: filmVideoUrl("aliya-ahmed.mp4"), poster: "/images/aliya-ahmed-poster.jpg", from: "#281826", to: "#120c12" },
+  { id: 5, title: "Lia & Telem", place: "Beverly Hills Hotel, LA", region: "us", video: filmVideoUrl("lia-telem.mp4"), poster: "/images/lia-telem-poster.jpg", from: "#241420", to: "#100a10" },
+  { id: 6, title: "Aisha & Ahmed", place: null, region: null, video: filmVideoUrl("shoot-aisha-ahmed.mp4"), poster: "/images/shoot-aisha-ahmed-poster.jpg", from: "#281826", to: "#120c12" },
 ];
 
 /* ── Services ── */

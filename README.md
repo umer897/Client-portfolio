@@ -40,6 +40,12 @@ New website enquiry from {{1}} ({{2}}): {{3}}
 
 `WHATSAPP_PHONE_NUMBER_ID` is the ID of the registered Business sender; the recipient is the phone number in `data/siteData.js`. Keep `.env.local` private. For production, set these variables in your hosting provider's environment settings and redeploy. Website submissions use the approved template because they may occur outside WhatsApp's 24-hour customer service window.
 
+## Portfolio videos
+
+The large portfolio videos are excluded from Git in `.gitignore`, so they are not included in Vercel deployments. Keep the hero loop in `public/videos`; the Ameera & Joy portfolio film is embedded from YouTube, while the other five portfolio videos can be uploaded to a public Vercel Blob store. Use web-optimized MP4 previews rather than multi-gigabyte camera originals.
+
+Set `NEXT_PUBLIC_FILM_VIDEO_BASE_URL` in the Vercel project to the Blob URL prefix ending in `/videos`, for example `https://your-store.public.blob.vercel-storage.com/videos`. Upload the five remaining files under that `videos/` prefix using the filenames in `data/siteData.js`, then redeploy. Without this variable, the site uses local `/videos/...` paths for development.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More

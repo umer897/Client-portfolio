@@ -24,7 +24,7 @@ export default function Films() {
         <div className="grid">
           {films.map((f, i) => (
             <article key={f.id} className="card rv" style={{ "--d": `${i * 70}ms`, display: filter === "all" || filter === f.region ? undefined : "none" }}
-              onClick={() => open({ title: f.title, video: f.video, poster: f.poster || f.image, image: f.image, bg: f.image ? undefined : bgOf(f), note: "4K wedding film preview" })}>
+              onClick={() => open({ title: f.title, video: f.video, youtubeId: f.youtubeId, poster: f.poster || f.image, image: f.image, bg: f.image ? undefined : bgOf(f), note: "4K wedding film preview" })}>
               <div className="thumb" style={f.image || f.poster ? undefined : { background: bgOf(f) }}>
                 {f.image ? <img src={f.image} alt="" /> : f.poster ? <img src={f.poster} alt="" /> : (
                   <div className="ap">
