@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Lumière Vows cinematic poster">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#240812"/>
+      <stop offset="52%" stop-color="#3b1022"/>
+      <stop offset="100%" stop-color="#10070d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="20%" r="45%">
+      <stop offset="0%" stop-color="#f0b2bd" stop-opacity="0.85"/>
+      <stop offset="52%" stop-color="#e8bd7a" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#240812" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g opacity="0.5" stroke="#e8bd7a" stroke-width="1">
+    <circle cx="1240" cy="180" r="180" fill="none"/>
+    <circle cx="1240" cy="180" r="220" fill="none"/>
+    <circle cx="1240" cy="180" r="260" fill="none"/>
+  </g>
+  <g fill="#f6d9a8" font-family="Georgia, serif" letter-spacing="6">
+    <text x="100" y="430" font-size="90">Lumière</text>
+    <text x="100" y="530" font-size="76">Vows</text>
+  </g>
+  <g fill="#e8bd7a" font-family="Arial, sans-serif" font-size="26" letter-spacing="8">
+    <text x="106" y="600">CINEMATIC WEDDING FILMS</text>
+  </g>
+</svg>

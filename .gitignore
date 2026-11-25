@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large video files
+public/videos/aliya-ahmed.mp4
+public/videos/ameera-joy.mp4
+public/videos/lia-telem.mp4
+public/videos/malak-firas.mp4
+public/videos/shoot-aisha-ahmed.mp4
+public/videos/sundus-ayaz.mp4
